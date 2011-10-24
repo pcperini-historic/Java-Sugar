@@ -1,0 +1,84 @@
+/*
+Java.css
+Java Sugar
+
+Created by Patrick Perini.
+Copyright 2011-2012 Patrick Perini. All rights reserved.
+*/
+
+/*
+	@theme Java
+	@placeholder java
+*/
+
+comment.block.java {
+	color:  #A69B00;
+}
+
+comment.begin.java {
+	color:  #BFB630;
+}
+
+comment.end.java {
+	color:  #BFB630;
+}
+
+comment.line.java {
+	color:  #BFB630;
+}
+
+comment.doc.java {
+	color:  #A69B00;
+	font-weight: bold;
+}
+
+imports.control.java {
+    color:  #D936C0;
+}
+
+method.control.java {
+    color:  #380470;
+}
+
+keywords.control.java {
+	color:  #5A0DAC;
+	font-weight: bold;
+}
+
+storage.type.java {
+	color:  #5A0DAC;
+}
+
+storage.type.modifier.java {
+	color:  #5A0DAC;
+}
+
+constants.numeric.java {
+	color:  #B40097;
+}
+
+constants.booleans.java {
+	color:  #B40097;
+	font-weight: bold;
+}
+
+constants.null.java {
+	color:  #B40097;
+	font-weight: bold;
+}
+
+constants.string.java {
+	color:  #B40097;
+}
+
+constants.string.begin.java {
+	color:  #D936C0;
+}
+
+constants.string.end.java {
+	color:  #D936C0;
+}
+
+constants.char.java {
+	color:  #B40097;
+}

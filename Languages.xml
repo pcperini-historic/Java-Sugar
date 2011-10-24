@@ -1,0 +1,23 @@
+<!--
+Languages.xml
+Java Sugar
+
+Created by Patrick Perini.
+Copyright 2011-2012 Patrick Perini. All rights reserved.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <language id="com.pcperini.java">
+        <root-zone>sourcecode.java</root-zone>
+        <name>Java</name>
+        <detectors>
+            <extension>java</extension>
+        </detectors>
+    </language>
+    
+    <meta>
+        <name>Java</name>
+        <author>Patrick Perini</author>
+    </meta>
+</settings>

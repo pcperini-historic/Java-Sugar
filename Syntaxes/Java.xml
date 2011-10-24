@@ -1,0 +1,112 @@
+<!--
+Java.xml
+Java Sugar
+
+Created by Patrick Perini.
+Copyright 2011-2012 Patrick Perini. All rights reserved.
+-->
+
+<?xml version="1.0"?>
+<syntax name="sourcecode.java">
+	<zones>
+	    <!--Comments-->
+	        <zone name="comment.block.java">
+	            <starts-with>
+	                <expression>/(\*)+</expression>
+	                <capture number="0" name="comment.begin.java"/>
+	            </starts-with>
+	            <ends-with>
+	                <expression>(\*)+/</expression>
+	                <capture number="0" name="comment.end.java"/>
+	            </ends-with>
+                <subzones>
+                    <zone name="comment.start.java">
+                        <expression>\*</expression>
+                        <capture number="0" name="comment.line.java"/>
+                    </zone>
+                    <zone name="comment.doc.java">
+                        <expression>(\@)([a-zA-Z])*\b</expression>
+                        <capture number="0" name="comment.doc.java"/>
+                    </zone>
+                </subzones>
+	        </zone>
+        
+	        <zone name="comment.line.java">
+	            <expression>(//).*$[\n\r]+?</expression>
+	            <capture number="1" name="comment.line.java"/>
+	        </zone>
+        <!--imports-->
+            <zone name="imports.control.java">
+                <starts-with>
+                    <expression>import</expression>
+                    <capture number="0" name="keywords.control.java"/>
+                </starts-with>
+                <ends-with>
+                    <expression>([a-zA-Z\.\*]+)</expression>
+                </ends-with>
+            </zone>
+        <!--Methods-->
+            <zone name="method.java">
+                <starts-with>
+                    <expression>([a-zA-Z\.])*\.([a-zA-Z]+)</expression>
+                    <capture number="2" name="method.control.java"/>
+                </starts-with>
+                <ends-with>
+                    <expression>(\(|;|\)|\n| |+|-|\*|\/|%)</expression>
+                </ends-with>
+            </zone>
+	    <!--Keywords-->
+	        <zone name="keywords.control.java">
+	            <expression>\b(abstract|assert|break|case|catch|class|const|continue|default|do|else|final|finally|for|goto|if|implements|import|instanceof|interface|native|new|package|private|protected|public|return|static|strictfp|super|switch|synchronized|this|throw|throws|transient|try|volatile|while)(\b)</expression>
+	        </zone>
+	    
+	    <!--Storage Keywords-->
+	        <zone name="storage.type.java">
+	            <expression>\b(boolean|byte|char|double|enum|float|int|long|short|String|void)\b</expression>
+	        </zone>
+	        
+	        <zone name="storage.type.modifier.java">
+	            <expression>\b(const|extends|final|implements|native|new|package|private|protected|public|static|synchronized|transient|volatile)\b</expression>
+	        </zone>
+	    
+	    <!--Literals-->
+	        <zone name="constants.numeric.java">
+                <expression>-?[0-9]*\.?[0-9]+</expression>
+	        </zone>
+	        
+	        <zone name="constants.booleans.java">
+	            <expression>\b(true|false)\b</expression>
+	        </zone>
+	        
+	        <zone name="constants.null.java">
+	            <expression>null</expression>
+	        </zone>
+	        
+	        <zone name="constants.string.java">
+	            <starts-with>
+	                <expression>"</expression>
+	                <capture number="0" name="string.begin.java"/>
+	            </starts-with>
+	            <ends-with>
+	                <expression>"</expression>
+	                <capture number="0" name="string.end.java"/>
+	            </ends-with>
+                <subzones>
+                    <zone name="constant.character.escape">
+                        <expression>(\\)("|\\)</expression>
+                    </zone>
+                </subzones>
+	        </zone>
+	        
+	        <zone name="constants.char.java">
+	            <starts-with>
+	                <expression>'</expression>
+	                <capture number="0" name="char.begin.java"/>
+	            </starts-with>
+	            <ends-with>
+	                <expression>'</expression>
+	                <capture number="0" name="char.end.java"/>
+	            </ends-with>
+	        </zone>
+	</zones>    
+</syntax>

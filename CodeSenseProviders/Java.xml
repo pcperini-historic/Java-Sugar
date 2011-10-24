@@ -1,0 +1,17 @@
+<!--
+Java.xml
+Java Sugar
+
+Created by Patrick Perini.
+Copyright 2011-2012 Patrick Perini. All rights reserved.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+    <provider>
+        <selector>java, java *</selector>
+        <completions>com.pcperini.java.keyword</completions>
+        <completions>com.pcperini.java.storage.type</completions>
+        <complete-match capture="1">\b([a-zA-Z_]+)</complete-match>
+    </provider>
+</codesense>
