@@ -63,7 +63,7 @@ Copyright 2011-2012 Patrick Perini. All rights reserved.
 	    
 	    <!--Storage Keywords-->
 	        <zone name="storage.type.java">
-	            <expression>\b(boolean|byte|char|double|enum|float|int|long|short|String|void)\b</expression>
+	            <expression>\b(boolean|byte|char|double|enum|float|int|long|short|void)\b</expression>
 	        </zone>
 	        
 	        <zone name="storage.type.modifier.java">
@@ -74,7 +74,7 @@ Copyright 2011-2012 Patrick Perini. All rights reserved.
 	        <zone name="constants.numeric.java">
                 <expression>-?[0-9]*\.?[0-9]+</expression>
 	        </zone>
-	        
+
 	        <zone name="constants.booleans.java">
 	            <expression>\b(true|false)\b</expression>
 	        </zone>

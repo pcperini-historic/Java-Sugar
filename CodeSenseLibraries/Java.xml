@@ -61,7 +61,6 @@ Copyright 2011-2012 Patrick Perini. All rights reserved.
         <completion string="int" />
         <completion string="long" />
         <completion string="short" />
-        <completion string="String" />
         <completion string="void" />
     </set>
     <set name="com.pcperini.java.classes">
@@ -1632,8 +1631,10 @@ Copyright 2011-2012 Patrick Perini. All rights reserved.
         <completion string="StreamCorruptedException" />
         <completion string="StreamTokenizer" />
         <completion string="StrictMath" />
+        <completion string="String" />
         <completion string="StringBuffer" />
         <completion string="StringBufferInputStream" />
+        <completion string="StringBuilder" />
         <completion string="StringCharacterIterator" />
         <completion string="StringContent" />
         <completion string="StringHolder" />
